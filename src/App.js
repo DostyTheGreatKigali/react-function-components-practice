@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
   const [count, setCount] = useState(0);
+  const [lyrics, setLyrics] = useState([]);
 
   const displayText = () => {
     if(text === 'Sending this as prop to header component') {
@@ -26,11 +27,30 @@ function App() {
     setCount(count - 1)
   }
 
+//   const fetchLyrics = 
+
+//   useEffect(() => {
+   
+// }, [])
+
+useEffect(() => {
+  const fetchData = async () => {
+    // const response = await fetch(`https://swapi.dev/api/people/1/`);
+    const response = await fetch(`http://localhost:8000/api/home`);
+    const newData = await response.json();
+    console.log(newData);
+  };
+
+  fetchData();
+});
+
+
+
 
   return (
     <Router>
     <div className="App">
-      <h1 style={{ textAlign: 'center' }}>React Personal Practice</h1>
+      {/* <h1 style={{ textAlign: 'center' }}>React Personal Practice</h1> */}
       <Nav />
       <Routes>
         {/* Passing props to elements */}
