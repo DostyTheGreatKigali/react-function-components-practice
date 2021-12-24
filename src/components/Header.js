@@ -5,7 +5,7 @@ function Header({ textAsProp, displayTextAsProp, countAsProp, incrementAsProp, d
     <>
     <h2>Header static content</h2>
      <h3>{textAsProp}</h3>
-     <button onClick={() => displayTextAsProp()}>Show New Text</button>
+     <button onClick={() => displayTextAsProp()}>{textAsProp === 'Sending this as prop to header component' ? 'Show New Text' : 'Show Old Text'}</button>
      <br />
      <br />
      <br />
