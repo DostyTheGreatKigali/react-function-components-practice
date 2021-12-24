@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
@@ -31,6 +34,7 @@ function App() {
 
 
   return (
+    <Router>
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -47,9 +51,31 @@ function App() {
         </a>
       </header> */}
       <h1 style={{ textAlign: 'center' }}>React Personal Practice</h1>
-      <br/>
-      <br/>
-      <br/>
+      <Nav />
+      <Routes>
+        {/* Passing props to elements */}
+        {/* https://react-location.tanstack.com/guides/route-elements */}
+      <Route path="/" element={
+      <Header 
+        textAsProp={text} 
+        displayTextAsProp={displayText}
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="/footer" element={
+      <Footer 
+        // textAsProp={text} 
+        // displayTextAsProp={displayText}
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+
+     </Routes>
+{/* 
       <Header 
         textAsProp={text} 
         displayTextAsProp={displayText}
@@ -66,8 +92,9 @@ function App() {
         incrementAsProp={increment}
         decrementAsProp={decrement}
       
-      />
+      /> */}
     </div>
+    </Router>
   );
 }
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 function Header({ textAsProp, displayTextAsProp, countAsProp, incrementAsProp, decrementAsProp }) {
   return (
     <>
+    <h2>Header static content</h2>
      <h3>{textAsProp}</h3>
      <button onClick={() => displayTextAsProp()}>Show New Text</button>
      <br />
