@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
@@ -50,6 +51,15 @@ function App() {
       <br/>
       <br/>
       <Header 
+        textAsProp={text} 
+        displayTextAsProp={displayText}
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}
+      
+      />
+
+      <Footer 
         textAsProp={text} 
         displayTextAsProp={displayText}
         countAsProp={count}
