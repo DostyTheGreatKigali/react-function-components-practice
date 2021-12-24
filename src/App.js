@@ -36,20 +36,6 @@ function App() {
   return (
     <Router>
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
       <h1 style={{ textAlign: 'center' }}>React Personal Practice</h1>
       <Nav />
       <Routes>
@@ -66,8 +52,6 @@ function App() {
       } />
       <Route path="/footer" element={
       <Footer 
-        // textAsProp={text} 
-        // displayTextAsProp={displayText}
         countAsProp={count}
         incrementAsProp={increment}
         decrementAsProp={decrement}  
@@ -75,24 +59,7 @@ function App() {
       } />
 
      </Routes>
-{/* 
-      <Header 
-        textAsProp={text} 
-        displayTextAsProp={displayText}
-        countAsProp={count}
-        incrementAsProp={increment}
-        decrementAsProp={decrement}
-      
-      />
 
-      <Footer 
-        textAsProp={text} 
-        displayTextAsProp={displayText}
-        countAsProp={count}
-        incrementAsProp={increment}
-        decrementAsProp={decrement}
-      
-      /> */}
     </div>
     </Router>
   );
