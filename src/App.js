@@ -4,6 +4,7 @@ import Header from './components/Header';
 
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
+  const [count, setCount] = useState(0);
   // const [text, showText] = useState('');
 
   // const displayText = () => {
@@ -18,6 +19,13 @@ function App() {
       setText("Sending this as prop to header component")
     }
     // console.log("Displaying Text")
+  }
+
+  const increment = () => {
+    setCount(count + 1)
+  }
+  const decrement = () => {
+    setCount(count - 1)
   }
 
 
@@ -41,7 +49,14 @@ function App() {
       <br/>
       <br/>
       <br/>
-      <Header textAsProp={text} displayTextAsProp={displayText} />
+      <Header 
+        textAsProp={text} 
+        displayTextAsProp={displayText}
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}
+      
+      />
     </div>
   );
 }
