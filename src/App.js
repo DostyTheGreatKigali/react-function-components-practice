@@ -9,12 +9,6 @@ import Nav from './components/Nav';
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
   const [count, setCount] = useState(0);
-  // const [text, showText] = useState('');
-
-  // const displayText = () => {
-  //   setText("We have set a new Text as Prop")
-  //   // console.log("Displaying Text")
-  // }
 
   const displayText = () => {
     if(text === 'Sending this as prop to header component') {
