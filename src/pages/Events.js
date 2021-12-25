@@ -17,8 +17,8 @@ function Events() {
       setEventsData(newData.events)
       setIsLoading(false)
       // setEventsData({ eventsData: newData})
-      console.log('Events Data')
-      console.log(eventsData.events)
+      // console.log('Events Data')
+      // console.log(eventsData.events)
     };
     fetchEventsData();
   }, []);

@@ -1,11 +1,19 @@
 // import he from 'he'
+import { useLocation } from 'react-router';
 
 function About({ aboutDataAsProp, isLoadingAsProp }) {
     console.log('On about page')
     console.log(aboutDataAsProp)
+    let location = useLocation();
+    console.log('Location data')
+    console.log(location)
+
     return (
       <div style={{ marginTop: 40 }}>
        <h1 className="mb-5">About</h1>
+       {/* <div className="alert alert-success" role="alert">
+           {location.state.greeting }
+        </div> */}
        {
            isLoadingAsProp ? <h1 className="text-center text-danger">Loading...</h1>
            :

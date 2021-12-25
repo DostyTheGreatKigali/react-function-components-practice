@@ -14,15 +14,22 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
 
   const goToAnotherPage = () => {
     navigate('about')
+    // navigate('about', { state: { greeting: 'Hello There!!!', response: 'We Love you!!!'} })
   }
     return (
       <div style={{ marginTop: 40 }}>
        <h1 className="mb-3">Welcome our Dear Friend</h1>
        <h3 className="mb-5">We're cordially inviting you to the matrimonial ceremony of</h3>
-       {
-         location.dataFromRegisteredUser !== undefined ?
+       {/* {
+         location.state !== null ?
          <div class="alert alert-success" role="alert">
-           location.dataFromRegisteredUser.message 
+           {location.state.success}
+         </div> : null
+       } */}
+       {
+         location.state !== null ?
+         <div class="alert alert-success" role="alert">
+           {location.state.dataFromRegisteredUser.message }
          </div> : null
        }
        {
@@ -49,7 +56,7 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
       </div>
       </div>
        <div className="text-center">
-       <button onClick={goToAnotherPage} className="btn btn-primary">
+       <button onClick={() => { goToAnotherPage() }} className="btn btn-primary">
           Read About
         </button>
        </div>
