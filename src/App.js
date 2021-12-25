@@ -32,9 +32,10 @@ useEffect(() => {
     // const response = await fetch(`http://localhost:8000/api/lyrics`);
     const response = await fetch(`http://elitte.host/api/home`);
     const newData = await response.json();
-    console.log('New Data')
+    console.log('New About Data')
     console.log(newData);
     setAboutData(newData)
+    // setAboutData({aboutData: newData})
     // console.log('About Data')
     // console.log(aboutData)
   };
