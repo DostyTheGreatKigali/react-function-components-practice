@@ -1,7 +1,7 @@
-function Home() {
+function Gallery() {
     return (
       <div style={{ marginTop: 40 }}>
-      <h2>Home</h2>
+      <h2>Gallery</h2>
        
       </div>
     );
@@ -9,4 +9,4 @@ function Home() {
   
   
   
-  export default Home;
+  export default Gallery;
