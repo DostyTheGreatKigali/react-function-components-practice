@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 // Components
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -114,6 +115,7 @@ useEffect(() => {
       } />
 
      </Routes>
+     <Footer />
 
     </div>
     </Router>

@@ -4,8 +4,12 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
   console.log('On home page')
   console.log(aboutDataAsProp)
 
+  // NAVIGATE TO ANOTHER PAGE
+  // https://dev.to/salehmubashar/usenavigate-tutorial-react-js-aop
   let navigate = useNavigate();
 
+  // DISPLAY DATE FROM ANOTHER PAGE AFTER LEAVING THAT PAGE
+  // https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
   let location = useLocation();
 
   const goToAnotherPage = () => {

@@ -88,6 +88,7 @@ else {
         {
             method: 'POST',
             headers: {
+                // 'Content-Type': 'application/json; charset=utf-8'
                 // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                 // 'Content-Type': 'multipart/form-data;',
                 // 'Authorization': 'Basic ' + Buffer.from(this.state.email +':'+ this.state.password).toString('base64') 
@@ -141,8 +142,7 @@ else {
                 //     //  alert(datas.user.api_token);
                 //alert('Successful Sign up', "Invalid Reference ID");
               //  alert('Successful Sign up', {dataFromRegisteredUser: datas.message});
-               alert('Successful Sign up', {dataFromRegisteredUser: datas});
-
+              alert('Successful Sign up', datas.message);
                 // this.props.navigation.navigate('Home');
                 //     //     { user: datas.user, teacher: datas.teacher })
                 // setTimeout(() => {
@@ -150,8 +150,10 @@ else {
                 // this.props.navigation.navigate('Home', datas);
 
                 // REDIRECT TO HOME PAGE
+                // https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
                 // goToAnotherPage()
-                navigate('/', datas.message)
+                // navigate('/', datas.message)
+                navigate('/', {dataFromRegisteredUser: datas})
 
             // }, 5000);
                 //     // this.props.navigation.navigate('Home')

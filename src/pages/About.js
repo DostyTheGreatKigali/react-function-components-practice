@@ -22,6 +22,7 @@ function About({ aboutDataAsProp, isLoadingAsProp }) {
                 <h5 className="card-title">{aboutDataAsProp.groomInfo.first_name} {" "} {aboutDataAsProp.groomInfo.middle_name} {" "} {aboutDataAsProp.groomInfo.last_name}</h5>
                 {/* ESCAPE HTML ENTITIES */}
                 {/* https://stackoverflow.com/questions/42361689/implement-html-entity-decode-in-react-js */}
+                {/* https://github.com/mathiasbynens/he */}
                 {/* <p className="card-text">{he.decode(aboutDataAsProp.groomInfo.description)}</p> */}
                 <p className="card-text">{aboutDataAsProp.groomInfo.description}</p>
                 {/* <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
