@@ -26,12 +26,12 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
            {location.state.success}
          </div> : null
        } */}
-       {
-         location.state !== null ?
+       {/* {
+         (location.state !== undefined || location.state !== null) ?
          <div class="alert alert-success" role="alert">
            {location.state.dataFromRegisteredUser.message }
          </div> : null
-       }
+       } */}
        {
          isLoadingAsProp ? <h1 className="text-center text-danger">Loading...</h1>
          : 
