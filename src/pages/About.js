@@ -1,11 +1,14 @@
 // import he from 'he'
 
-function About({ aboutDataAsProp }) {
+function About({ aboutDataAsProp, isLoadingAsProp }) {
     console.log('On about page')
     console.log(aboutDataAsProp)
     return (
       <div style={{ marginTop: 40 }}>
        <h1 className="mb-5">About</h1>
+       {
+           isLoadingAsProp ? <h1 className="text-center text-danger">Loading...</h1>
+           :
        <div className="container">
        <div className="row">
        <div className="col-md-6">
@@ -48,7 +51,8 @@ function About({ aboutDataAsProp }) {
         </div>
         </div>
        </div>
-      </div>
+}
+     </div>
     );
   }
   

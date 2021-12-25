@@ -43,14 +43,37 @@ function Events() {
     return (
       <div style={{ marginTop: 40 }}>
         <h1 className="mb-5">Events</h1>
-        {
-          isLoading ? <h1 className="text-center text-danger">Loading...</h1> 
-          : <div className="container">
-            <div className="row">
-             { eventsArray }
+        <div className="container">
+          <div className="row">
+            {/* {
+              eventsArray.length ? eventsArray : <h1>Loading...</h1>
+            } */}
+
+            {/* {
+              isLoading ? <h1>Loading...</h1> 
+              : eventsData.map(event => {
+                return (
+                  <div className="col-md-4" key={event.id}>
+                <div className="card" style={{width: '18rem'}}>
+                  <img src={event.image_url} className="card-img-top" alt={event.title} />
+                  <div className="card-body">
+                    <h5 className="card-title">{event.title}</h5>
+                    <p className="card-text">{event.event_date}</p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                  </div>
+                )
+                
+                ;
+              })
+            } */}
+
+            {
+              isLoading ? <h1 className="text-center text-danger">Loading...</h1> : eventsArray
+            }
           </div>
-        </div>    
-       }   
+        </div>       
       </div>
     );
   }

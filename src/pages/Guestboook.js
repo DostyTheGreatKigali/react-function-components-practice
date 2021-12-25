@@ -49,7 +49,7 @@ function Guestbook() {
     // return;
     // alert(JSON.stringify(details));
 
-    alert(details.agree_to_notifications)
+    // alert(details.agree_to_notifications)
 
 var regExp = /^[^0-9]+$/;
 // var parentPhoneNumber = phoneNumber.match(regExp);

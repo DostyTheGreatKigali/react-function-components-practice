@@ -21,12 +21,11 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
            location.dataFromRegisteredUser.message 
          </div> : null
        }
-
-       <div className="container">
-       <div className="row">
        {
          isLoadingAsProp ? <h1 className="text-center text-danger">Loading...</h1>
-         : <>
+         : 
+      <div className="container">
+       <div className="row">
         <div className="col-md-6">
        <div className="card" style={{width: '24rem'}}>
        <img src={aboutDataAsProp.groomInfo.image_url} className="card-img" alt={aboutDataAsProp.groomInfo.first_name}/>
@@ -44,14 +43,16 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
       </div>
       </div>
       </div>
-         </>
-       }
-        </div>
-        <button onClick={goToAnotherPage} className="btn btn-primary">
+      </div>
+       <div className="text-center">
+       <button onClick={goToAnotherPage} className="btn btn-primary">
           Read About
         </button>
-
        </div>
+      </div>
+       }
+        
+
       </div>
     );
   }
