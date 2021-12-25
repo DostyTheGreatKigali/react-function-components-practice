@@ -14,8 +14,14 @@ import GiftRegistry from './pages/GiftRegistry';
 import Guestbook from './pages/Guestboook';
 import Story from './pages/Story';
 
+// Testing Packages
+import Basic from '../src/pages/packages-tests/Formik/Basic'
+import ReducedBasic from '../src/pages/packages-tests/Formik/ReducedBasic'
+import Example1 from '../src/pages/packages-tests/ReactHookForm/Example1'
+
 function App() {
   const [aboutData, setAboutData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true)
   // const [count, setCount] = useState(0);
   // const [lyrics, setLyrics] = useState([]);
 
@@ -35,6 +41,7 @@ useEffect(() => {
     console.log('New About Data')
     console.log(newData);
     setAboutData(newData)
+    setIsLoading(false)
     // setAboutData({aboutData: newData})
     // console.log('About Data')
     // console.log(aboutData)
@@ -55,14 +62,14 @@ useEffect(() => {
         {/* https://react-location.tanstack.com/guides/route-elements */}
       <Route path="/" element={
       <Home 
-        // textAsProp={text} 
-        
+      aboutDataAsProp={aboutData}
+      isLoadingAsProp={isLoading}
       /> 
       } />
       <Route path="about" element={
       <About 
         aboutDataAsProp={aboutData}
-  
+        isLoadingAsProp={isLoading}
       />
       } />
       <Route path="story" element={
@@ -78,25 +85,29 @@ useEffect(() => {
       />
       } />
       <Route path="families" element={
-      <Family 
+      // <Family 
+      <Example1 
         //countAsProp={count}
   
       />
       } />
       <Route path="gallery" element={
+      // <Example2 
       <Gallery 
         //countAsProp={count}
   
       />
       } />
       <Route path="guestbook" element={
-      <Guestbook 
+      // <Guestbook 
+      <Basic 
         //countAsProp={count}
   
       />
       } />
       <Route path="gift-registry" element={
-      <GiftRegistry 
+      // <GiftRegistry 
+      <ReducedBasic 
         //countAsProp={count}
   
       />
