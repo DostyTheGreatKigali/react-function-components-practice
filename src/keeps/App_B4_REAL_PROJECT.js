@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Nav from './components/Nav';
-import Home from './pages/Home';
-import About from './pages/About';
 
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
@@ -58,7 +56,7 @@ useEffect(() => {
         {/* Passing props to elements */}
         {/* https://react-location.tanstack.com/guides/route-elements */}
       <Route path="/" element={
-      <Home 
+      <Header 
         textAsProp={text} 
         displayTextAsProp={displayText}
         countAsProp={count}
@@ -66,8 +64,8 @@ useEffect(() => {
         decrementAsProp={decrement}  
       />
       } />
-      <Route path="about" element={
-      <About 
+      <Route path="/footer" element={
+      <Footer 
         countAsProp={count}
         incrementAsProp={increment}
         decrementAsProp={decrement}  

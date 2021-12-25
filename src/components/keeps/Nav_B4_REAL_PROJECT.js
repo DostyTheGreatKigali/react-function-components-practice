@@ -38,7 +38,7 @@ function Nav() {
              <Link to="/" className="nav-link" style={{cursor: 'pointer'}}>Home <span className="sr-only">(current)</span></Link>
            </li>
            <li className="nav-item">
-             <Link to="about" className="nav-link" style={{cursor: 'pointer'}}>About</Link>
+             <Link to="footer" className="nav-link" style={{cursor: 'pointer'}}>About</Link>
            </li>
            {/* <li className="nav-item">
              <Link to="/contact" className="nav-link" style={{cursor: 'pointer'}}>Contact us</Link>
