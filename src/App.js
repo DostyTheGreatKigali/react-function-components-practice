@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import About from './pages/About';
+import Events from './pages/Events';
+import Family from './pages/Family';
+import Gallery from './pages/Gallery';
+import GiftRegistry from './pages/GiftRegistry';
+import Guestbook from './pages/Guestboook';
+import Story from './pages/Story';
 
 function App() {
   const [text, setText] = useState('Sending this as prop to header component');
@@ -68,6 +72,48 @@ useEffect(() => {
       } />
       <Route path="about" element={
       <About 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="story" element={
+      <Story 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="events" element={
+      <Events 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="families" element={
+      <Family 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="gallery" element={
+      <Gallery 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="guestbook" element={
+      <Guestbook 
+        countAsProp={count}
+        incrementAsProp={increment}
+        decrementAsProp={decrement}  
+      />
+      } />
+      <Route path="gift-registry" element={
+      <GiftRegistry 
         countAsProp={count}
         incrementAsProp={increment}
         decrementAsProp={decrement}  

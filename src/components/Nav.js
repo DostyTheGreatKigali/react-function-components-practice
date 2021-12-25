@@ -40,15 +40,24 @@ function Nav() {
            <li className="nav-item">
              <Link to="about" className="nav-link" style={{cursor: 'pointer'}}>About</Link>
            </li>
-           {/* <li className="nav-item">
-             <Link to="/contact" className="nav-link" style={{cursor: 'pointer'}}>Contact us</Link>
+           <li className="nav-item">
+             <Link to="story" className="nav-link" style={{cursor: 'pointer'}}>Story</Link>
            </li>
            <li className="nav-item">
-             <Link to="/sign-up" className="nav-link" href="#"><button>Sign up</button></Link>
+             <Link to="events" className="nav-link" href="#">Events</Link>
            </li>
            <li className="nav-item">
-             <Link to="/sign-in" className="nav-link" href="#"><button>Sign in</button></Link>
-           </li> */}
+             <Link to="families" className="nav-link" href="#">Families</Link>
+           </li>
+           <li className="nav-item">
+             <Link to="gallery" className="nav-link" style={{cursor: 'pointer'}}>Gallery</Link>
+           </li>
+           <li className="nav-item">
+             <Link to="guestbook" className="nav-link" href="#">Guestbook</Link>
+           </li>
+           <li className="nav-item">
+             <Link to="gift-registry" className="nav-link" href="#">Gift Registry</Link>
+           </li>
          </ul>
          {/* <!-- <form className="form-inline my-2 my-lg-0">
            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
