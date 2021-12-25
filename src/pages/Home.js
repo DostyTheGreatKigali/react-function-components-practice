@@ -1,10 +1,12 @@
-import { useNavigate } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 
 function Home({ aboutDataAsProp, isLoadingAsProp }) {
   console.log('On home page')
   console.log(aboutDataAsProp)
 
   let navigate = useNavigate();
+
+  let location = useLocation();
 
   const goToAnotherPage = () => {
     navigate('about')
@@ -13,6 +15,13 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
       <div style={{ marginTop: 40 }}>
        <h1 className="mb-3">Welcome our Dear Friend</h1>
        <h3 className="mb-5">We're cordially inviting you to the matrimonial ceremony of</h3>
+       {
+         location.dataFromRegisteredUser !== undefined ?
+         <div class="alert alert-success" role="alert">
+           location.dataFromRegisteredUser.message 
+         </div> : null
+       }
+
        <div className="container">
        <div className="row">
        {
@@ -38,8 +47,8 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
          </>
        }
         </div>
-        <button onClick={goToAnotherPage} className="btn btn-danger">
-          Read About Couple
+        <button onClick={goToAnotherPage} className="btn btn-primary">
+          Read About
         </button>
 
        </div>

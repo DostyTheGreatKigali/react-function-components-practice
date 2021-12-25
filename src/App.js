@@ -15,9 +15,9 @@ import Guestbook from './pages/Guestboook';
 import Story from './pages/Story';
 
 // Testing Packages
-import Basic from '../src/pages/packages-tests/Formik/Basic'
-import ReducedBasic from '../src/pages/packages-tests/Formik/ReducedBasic'
-import Example1 from '../src/pages/packages-tests/ReactHookForm/Example1'
+// import Basic from '../src/pages/packages-tests/Formik/Basic'
+// import ReducedBasic from '../src/pages/packages-tests/Formik/ReducedBasic'
+// import Example1 from '../src/pages/packages-tests/ReactHookForm/Example1'
 
 function App() {
   const [aboutData, setAboutData] = useState(null);
@@ -38,8 +38,8 @@ useEffect(() => {
     // const response = await fetch(`http://localhost:8000/api/lyrics`);
     const response = await fetch(`http://elitte.host/api/home`);
     const newData = await response.json();
-    console.log('New About Data')
-    console.log(newData);
+    // console.log('New About Data')
+    // console.log(newData);
     setAboutData(newData)
     setIsLoading(false)
     // setAboutData({aboutData: newData})
@@ -85,8 +85,8 @@ useEffect(() => {
       />
       } />
       <Route path="families" element={
-      // <Family 
-      <Example1 
+      <Family 
+      // <Example1 
         //countAsProp={count}
   
       />
@@ -99,15 +99,15 @@ useEffect(() => {
       />
       } />
       <Route path="guestbook" element={
-      // <Guestbook 
-      <Basic 
+      <Guestbook 
+      // <Basic 
         //countAsProp={count}
   
       />
       } />
       <Route path="gift-registry" element={
-      // <GiftRegistry 
-      <ReducedBasic 
+      <GiftRegistry 
+      // <ReducedBasic 
         //countAsProp={count}
   
       />
