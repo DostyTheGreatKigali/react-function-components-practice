@@ -89,14 +89,15 @@ else {
     // alert("Link is "  + this.state.branch +'/api/app/member/init')
     fetch(
 
-      // `http://elitte.host/api/guestsbook`,
-      `http://localhost:8000/api/guestsbook`,
+      `http://elitte.host/api/guestsbook`,
+      // `http://localhost:8000/api/guestsbook`,
         
         // Config.API_URL + 'guestsbook',
         // this.state.branch +'/api/app/member/init',
         {
             method: 'POST',
             headers: {
+              'Content-Type': 'application/json'
                 // 'Content-Type': 'application/json; charset=utf-8'
                 // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                 // 'Content-Type': 'multipart/form-data;',
@@ -162,7 +163,8 @@ else {
                 // https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
                 // goToAnotherPage()
                 // navigate('/', datas.message)
-                navigate('/', { state: {dataFromRegisteredUser: datas}})
+                // navigate('/', { state: {dataFromRegisteredUser: datas}})
+                navigate('/', { state: {success: "You have successfully registered! Thank you!"}})
 
             // }, 5000);
                 //     // this.props.navigation.navigate('Home')
