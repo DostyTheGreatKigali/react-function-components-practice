@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router';
-// import { useNavigate, useLocation } from 'react-router';
+// import { useNavigate } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 
 function Home({ aboutDataAsProp, isLoadingAsProp }) {
   console.log('On home page')
@@ -11,7 +11,7 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
 
   // DISPLAY DATE FROM ANOTHER PAGE AFTER LEAVING THAT PAGE
   // https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
-  // let location = useLocation();
+  let location = useLocation();
 
   const goToAnotherPage = () => {
     navigate('about')
@@ -21,12 +21,12 @@ function Home({ aboutDataAsProp, isLoadingAsProp }) {
       <div style={{ marginTop: 40 }}>
        <h1 className="mb-3">Welcome our Dear Friend</h1>
        <h3 className="mb-5">We're cordially inviting you to the matrimonial ceremony of</h3>
-       {/* {
+       {
          location.state !== null ?
          <div class="alert alert-success" role="alert">
            {location.state.success}
          </div> : null
-       } */}
+       }
        {/* {
          (location.state !== undefined || location.state !== null) ?
          <div class="alert alert-success" role="alert">
