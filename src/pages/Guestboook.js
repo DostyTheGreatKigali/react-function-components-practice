@@ -89,8 +89,8 @@ else {
     // alert("Link is "  + this.state.branch +'/api/app/member/init')
     fetch(
 
-      `http://elitte.host/api/guestsbook`,
-      // `http://localhost:8000/api/guestsbook`,
+      // `http://elitte.host/api/guestsbook`,
+      `http://localhost:8000/api/guestsbook`,
         
         // Config.API_URL + 'guestsbook',
         // this.state.branch +'/api/app/member/init',
@@ -239,6 +239,8 @@ else {
             className="container"
             onSubmit={handleSubmit}
         >
+        <div className="row">
+        <div className="col-md-6">
         <div className="form-group">
             <label htmlFor="name" className="text-dark text-left">Full Name</label>
             <input 
@@ -260,7 +262,9 @@ else {
             )}
 
         </div>
+        </div>
 
+        <div className="col-md-6">
         <div className="form-group">
             <label htmlFor="email"  className="text-dark text-left">Email</label>
             <input 
@@ -283,6 +287,9 @@ else {
 
             <small id="emailHelp" className="form-text text-dark text-left">We'll never share your email with anyone else.</small>
             
+        </div>
+        </div>
+
         </div>
 
         <div className="form-group" style={{display: 'none'}}>
@@ -314,6 +321,8 @@ else {
         {/* Select inputs */}
         {/* https://www.tutorialspoint.com/reactjs/reactjs_formik.htm */}
 
+        <div className="row">
+        <div className="col-md-6">
         <div className="form-group">
             <label htmlFor="number_of_guests" className="text-dark text-left"> Number of Guests you're bringing (include yourself) </label>
             <select 
@@ -340,7 +349,9 @@ else {
             )}
 
         </div>
+        </div>
 
+        <div className="col-md-6">
         <div className="form-group">
             <label htmlFor="events_to_attend" className="text-dark text-left"> What event(s) will you attend?</label>
             <select 
@@ -364,6 +375,8 @@ else {
               <div className="input-feedback">{errors.events_to_attend}</div>
             )}
 
+        </div>
+        </div>
         </div>
 
         <div className="form-group">
